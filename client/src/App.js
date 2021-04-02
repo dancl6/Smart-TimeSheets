@@ -7,7 +7,8 @@ import ApolloClient from 'apollo-boost';
 
 import User_Login from "./pages/User_Login";
 import Nav from "./components/Nav";
-import { StoreProvider } from "./utils/GlobalState";
+// import { StoreProvider } from "./utils/GlobalState";
+import Home from "./pages/Home";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -27,7 +28,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <StoreProvider>
+          {/* <StoreProvider> */}
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
@@ -38,7 +39,7 @@ function App() {
               <Route exact path="/success" component={Success} />
               <Route component={NoMatch} /> */}
             </Switch>
-          </StoreProvider>
+          {/* </StoreProvider> */}
         </div>
       </Router>
     </ApolloProvider>
