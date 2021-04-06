@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const Users = require('./Users');
+const Users = require('./Days');
 const Category = require('./Category');
 
 const groupsSchema = new Schema({
